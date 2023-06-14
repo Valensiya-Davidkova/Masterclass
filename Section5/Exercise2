@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Exercise_2 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        long res=toMilesPerHour(75.114);
+        // System.out.println(res);
+        printConversion(75.114);
+
+    }
+    public static long toMilesPerHour(double kilometersPerHour){
+       long result;
+       if(kilometersPerHour<0){
+           result=-1;
+       }
+       else{
+           double kilometres=kilometersPerHour/1.609;
+           result=Math.round(kilometres);
+       }
+       return result;
+    }
+    public static void printConversion(double kilometersPerHour){
+        if(kilometersPerHour<0){
+            System.out.println("Invalid Value");
+        }
+        else{
+            double milesPerHour=kilometersPerHour/1.609;
+            long result=Math.round(milesPerHour);
+            System.out.println(kilometersPerHour+" km/h = "+result+" mi/h");
+        }
+    }
+}

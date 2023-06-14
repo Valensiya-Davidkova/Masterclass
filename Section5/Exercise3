@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Exercise_3 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        int megaB=2500/1024; // purvo
+        double megaBytes=2500%1024;
+        // System.out.println(megaB+"   "+megaBytes);
+        printMegaBytesAndKiloBytes(5000);
+    }
+    public static void printMegaBytesAndKiloBytes(int kiloBytes){
+        if(kiloBytes<0){
+            System.out.println("Invalid Value");
+        }
+        else{
+            int first=kiloBytes/1024;
+            double megaBytes=kiloBytes%1024;
+            System.out.printf("%d KB = %d MB and %.0f KB%n",kiloBytes,first,megaBytes);
+        }
+    }
+}

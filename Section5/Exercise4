@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Exercise_4 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        boolean res=shouldWakeUp(true,-1);
+        System.out.println(res);
+    }
+    public static boolean shouldWakeUp(boolean barking,int hourOfDay){
+        boolean result=true;
+        if((barking==false) ||(hourOfDay<0)||(hourOfDay>23)||(hourOfDay>=8 && hourOfDay<23)){
+            result=false;
+        }
+        else if((hourOfDay>=1 && hourOfDay<=7)|| (hourOfDay==23)){
+            result=true;
+        }
+        return result;
+    }
+}

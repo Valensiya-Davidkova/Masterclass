@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Exercise_5 {
+    public static void main(String[] args){
+      Scanner in=new Scanner(System.in);
+      Scanner scanner=new Scanner(System.in);
+      boolean res=isLeapYear(1924);
+      System.out.println(res);
+      // pri delene na 4 -> ostatuk 0 i pri delene na 100 da !=0
+        // pri delene na 400 ->ostauk 0 i pri delene na 100 da e 0
+
+
+
+    }
+    public static boolean isLeapYear(int year){
+        boolean result=true;
+        if((year<1) || (year>9999)){
+            result=false;
+        }
+        else{
+            double dev400=year/400.0;
+            double dev100=year/100.0;
+            double dev4=year/4.0;
+            if((dev400-(year/400))==0 && (dev100-(year/100))==0){
+                result=true;
+            }
+            else if((dev4-(year/4))==0 && dev100-(year/100)!=0){
+                result=true;
+            }
+            else{
+                result=false;
+            }
+        }
+        return result;
+    }
+}

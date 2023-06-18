@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Exercise_6 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        boolean res=areEqualByThreeDecimalPlaces(-3.123,3.123);
+        System.out.println(res);
+    }
+    public static boolean areEqualByThreeDecimalPlaces(double a,double b){
+        boolean result=true;
+        int fNum=(int)a;
+        int sNum=(int)b;
+        float fOstatuk=(float)(a-fNum)*1000;
+        float sOstatuk=(float)(b-sNum)*1000;
+        int first=(int) fOstatuk;
+        int second=(int) sOstatuk;
+        if((fNum==sNum) && (first==second)){
+            result=true;
+        }
+        else{
+            result=false;
+        }
+        return result;
+    }
+
+}

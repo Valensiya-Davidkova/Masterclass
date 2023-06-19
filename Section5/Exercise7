@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Exercise_7 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        boolean res=hasEqualSum(1,-1,0);
+        System.out.println(res);
+    }
+    public static boolean hasEqualSum(int a,int b,int c){
+        boolean result=true;
+        int sum=a+b;
+        if(sum==c){
+            result=true;
+        }
+        else{
+            result=false;
+        }
+        return result;
+    }
+}

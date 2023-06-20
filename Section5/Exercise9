@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Exercise_9 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        double res=area(5.0);
+        System.out.println(res);
+
+    }
+    public static double area(double radius){
+        double areaCircle;
+        if(radius<0){
+            areaCircle=-1.0;
+        }
+        else{
+            areaCircle=radius*radius*Math.PI;
+        }
+        return areaCircle;
+    }
+    public static double area(double x,double y){
+        double areaRectangle;
+        if(x<0 || y<0){
+            areaRectangle=-1;
+        }
+        else{
+            areaRectangle=x*y;
+        }
+        return areaRectangle;
+    }
+}

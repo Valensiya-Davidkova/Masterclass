@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Exercise_10 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        printYearsAndDays(1440);
+
+    }
+    public static void printYearsAndDays(long minutes) {
+        int hours = (int) (minutes / 60);// 1440/60=24
+        int days = hours / 24;//1
+        int year = days / 365;//0
+        int dayResult = days - 365;//1-365=-364
+        if(dayResult<0){
+            dayResult=days;
+        }
+        if (minutes < 0) {
+            System.out.println("Invalid Value");
+        }
+        else if(minutes==0){
+            System.out.println(0 + " min = " + 0 + " y and " + 0 + " d");
+        }
+        else {
+            if (dayResult == 365) {
+                System.out.println(minutes + " min = " + year + " y and " + 0 + " d");
+            } else {
+                System.out.println(minutes + " min = " + year + " y and " + dayResult + " d");
+            }
+        }
+    }
+}

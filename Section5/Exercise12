@@ -1,0 +1,30 @@
+package Section_5;
+import java.util.Scanner;
+public class Exercise_12 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        boolean res=isCatPlaying(false,35);
+        System.out.println(res);
+
+    }
+    public static boolean isCatPlaying(boolean summer,int temperature){
+        boolean result=false;
+        if(summer==true){
+            if(temperature>=25 && temperature<=45){
+                result=true;
+            }else{
+                result=false;
+            }
+        }
+        else if(summer==false){
+            if(temperature>=25 && temperature<=35){
+                result=true;
+            }
+            else{
+                result=false;
+            }
+        }
+        return result;
+    }
+}

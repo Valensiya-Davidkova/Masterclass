@@ -1,0 +1,64 @@
+package Section_6;
+import java.util.Scanner;
+public class Exercise_3 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        /*double ostatuk=8/1.0;//7.0
+        int ost=8/1;//7
+        double ostatuk1=8/8.0;//1.0
+        int ost1=8/8;//1
+        System.out.println(ostatuk+"--->"+ost+"--->"+ostatuk1+"--->"+ost1);
+        int counterPrime=0;
+        for(int i=1;i<=1000;i+=1){
+            int currNumber=i;
+            int flag=0;
+            int counter=0;
+            //int counterPrime=0;
+            for(int j=2;j<=currNumber-1;j+=1){
+               int cqlO=currNumber/j;//2
+               double realenO=currNumber/(double)j;//2.0
+               if((realenO-cqlO)!=0){// ne e prosto chislo
+                counter=counter+1;
+               }
+            }
+            if((currNumber-2)==counter){
+                flag=1;
+            }
+            if(flag==1){
+                counterPrime=counterPrime+1;
+                System.out.println(i);
+            }
+            if(counterPrime==3){
+                break;
+            }
+        }
+        //4-> currNumber=4;
+        //5-> 5/2; 5/3; 5/4 ----> ne se delqt tochno
+        /*for(int i=2;i<=4;i+=1){
+            int b=5/i;//2 1 1
+            double a=5/i;// 2.0 1.0 1.0---> OSTATUK 0
+            if(a-b!=0){
+               break;//ne e prosto chislo
+            }else {
+                System.out.println(a + "-------" + b);
+            }
+        }*/
+        double ostatuk=15%3;// 0 15%5=0
+        //System.out.println(ostatuk);
+        int counter=0;
+        int SUM=0;
+        for(int i=1;i<=1000;i+=1){
+            if((i%3==0) && (i%5==0)){
+                counter=counter+1;
+                SUM=SUM+i;
+                System.out.println("Number: "+i);
+            }
+            if(counter==5){
+                break;
+            }
+        }
+        System.out.println("Sum: "+SUM);
+
+    }
+}

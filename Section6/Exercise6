@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Exercise_6 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        int number=1998;
+        int firstDigit=0;
+        while(number>0){
+            number=number/10;
+            firstDigit=number;
+        }
+        System.out.println(firstDigit);
+        int sum=sumFirstAndLastDigit(0);
+        System.out.println(sum);
+
+    }
+    public static int sumFirstAndLastDigit(int number){
+        int number1=number;
+        int dublicateNumber=number;
+        int sum=0;
+        if(number>=0) {
+            int countDigits = 0;
+            int umnojenie = 1;
+            int lastDigit = number % 10;
+            while (number1 > 0) {
+                countDigits = countDigits + 1;
+                number1 = number1 / 10;
+            }
+            for (int i = 1; i < countDigits; i += 1) {
+                umnojenie = umnojenie * 10;
+            }
+            int firstDigit = dublicateNumber / umnojenie;
+            //System.out.println(firstDigit + "--->" + lastDigit);
+            sum = firstDigit + lastDigit;
+        }else{
+            sum=-1;
+        }
+        return sum;
+    }
+}

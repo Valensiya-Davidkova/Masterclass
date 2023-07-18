@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class Exercise_5 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        /*int number=12321;
+        int number1=number;
+        //broi na znacite
+        int counterDigits=0;
+        while(number>0){
+            counterDigits=counterDigits+1;
+            number=number/10;
+        }
+        //System.out.println(counterDigits);
+        //prevrushtane v 10,100,1000
+        int umnojenie=1;
+        for(int i=1;i<counterDigits;i+=1){
+            umnojenie=umnojenie*10;
+        }
+        //System.out.println(umnojenie);
+        //obrushtane na chisloto
+        int reversed=0;
+        while(number1>0){
+            int lastDigit=number1%10;
+            reversed=reversed+(lastDigit*umnojenie);
+            umnojenie=umnojenie/10;
+            number1=number1/10;
+        }
+        System.out.println("Reversed = "+reversed);*/
+        boolean res=isPalindrome(1001);
+        System.out.println(res);
+    }
+    public static boolean isPalindrome(int number){
+        boolean result=false;
+        int dublicateNumber=number;
+        if(number<0){
+            number=number*(-1);
+            dublicateNumber=dublicateNumber*(-1);
+        }
+        int number1=number;
+        int counterDigits=0;
+        while(number>0){
+            counterDigits=counterDigits+1;
+            number=number/10;
+        }
+        int umnojenie=1;
+        for(int i=1;i<counterDigits;i+=1){
+            umnojenie=umnojenie*10;
+        }
+        int reversed=0;
+        while(number1>0){
+            int lastDigit=number1%10;
+            reversed=reversed+(lastDigit*umnojenie);
+            umnojenie=umnojenie/10;
+            number1=number1/10;
+        }
+        if(dublicateNumber==reversed){
+            result=true;
+        }
+        else{
+            result=false;
+        }
+        return result;
+    }
+}

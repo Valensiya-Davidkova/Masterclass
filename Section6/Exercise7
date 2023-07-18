@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Exercise_7 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        int res=getEvenDigitSum(124);
+        System.out.println(res);
+
+    }
+    public static int getEvenDigitSum(int number){
+        int sum=0;
+        int lastDigit=0;
+        if(number<0){
+            sum=-1;
+        }
+        else{
+            while(number>0){
+                lastDigit=number%10;
+                if(lastDigit%2==0) {
+                    sum = sum + lastDigit;
+                }
+                number=number/10;
+            }
+        }
+        return sum;
+    }
+}

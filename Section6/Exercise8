@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Exercise_8 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        boolean res=hasSharedDigit(10,100);
+        System.out.println(res);
+    }
+    public static boolean hasSharedDigit(int a,int b){
+        boolean result=false;
+        if(a<10 || a>99 || b<10 ||b>99){
+                result=false;
+        }
+        else{
+            int firstA=a/10;
+            int ostatukA=a%10;
+            int firstB=b/10;
+            int ostatukB=b%10;
+            //System.out.println(firstA+"--->"+ostatukA+"--->"+firstB+"--->"+ostatukB);
+            if(firstA==firstB){
+                result=true;
+            }
+            else if(firstA==ostatukB){
+                result=true;
+            }
+            else if(ostatukA==firstB){
+                result=true;
+            }
+            else if(ostatukA==ostatukB){
+                result=true;
+            }
+            else{
+                result=false;
+            }
+        }
+        return result;
+    }
+}

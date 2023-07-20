@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Exercise_11 {
+    public static void main(String[] args){
+       Scanner in=new Scanner(System.in);
+       Scanner scanner=new Scanner(System.in);
+       int res=getGreatestCommonDivisor(81,153);
+       System.out.println(res);
+
+    }
+    public static int getGreatestCommonDivisor(int first,int second){
+        int result=0;
+        ArrayList<Integer> firstARR=new ArrayList<>();
+        ArrayList<Integer> secondARR=new ArrayList<>();
+        ArrayList<Integer> thirdARR=new ArrayList<>();
+        if(first<10 || second<10){
+            result=-1;
+        }
+        else{
+            for(int i=1;i<=first;i+=1){
+                if(first%i==0){
+                    firstARR.add(i);
+                }
+            }
+            for(int i=1;i<=second;i+=1){
+                if(second%i==0){
+                    secondARR.add(i);
+                }
+            }
+            for(int i=0;i<firstARR.size();i+=1){
+                for(int j=0;j<secondARR.size();j+=1){
+                    if(firstARR.get(i)==secondARR.get(j)){
+                        thirdARR.add(firstARR.get(i));
+                    }
+                }
+            }
+            int lastElement=thirdARR.size()-1;
+            result=thirdARR.get(lastElement);
+        }
+        return result;
+    }
+}

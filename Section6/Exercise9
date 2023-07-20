@@ -1,0 +1,42 @@
+package Section_6;
+import java.util.Scanner;
+public class Exercise_9 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        boolean res=hasSameLastDigit(9,99,999);
+        System.out.println(res);
+
+    }
+    public static boolean isValid(int number){
+        boolean result=false;
+        if(number>=10 && number<=1000){
+            result=true;
+        }
+        else{
+            result=false;
+        }
+        return result;
+    }
+    public static boolean hasSameLastDigit(int a,int b,int c){
+        boolean result=false;
+        boolean validA=isValid(a);
+        boolean validB=isValid(b);
+        boolean validC=isValid(c);
+        if(validA==true && validB==true && validC==true){
+           int lastDigitA=a%10;
+           int lastDigitB=b%10;
+           int lastDigitC=c%10;
+           if((lastDigitA==lastDigitB) || (lastDigitA==lastDigitC) || (lastDigitB==lastDigitC)){
+               result=true;
+           }
+           else{
+               result=false;
+           }
+        }
+        else{
+            result=false;
+        }
+        return result;
+    }
+}

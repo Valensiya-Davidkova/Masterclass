@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Exercise_10 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        /*for(int i=1;i<=6;i+=1){
+            if(6%i==0){
+                System.out.println(i);
+            }
+        }*/
+        printFactors(-1);
+
+    }
+    public static void printFactors(int number){
+        if(number<1){
+            System.out.println("Invalid Value");
+        }
+        else{
+            for(int i=1;i<=number;i+=1){
+                if(number%i==0){
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+}

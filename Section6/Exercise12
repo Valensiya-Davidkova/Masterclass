@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Exercise_12 {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
+        boolean res=isPerfectNumber(6);
+        System.out.println(res);
+
+    }
+    public static boolean isPerfectNumber(int number){
+        boolean result=false;
+        int sum=0;
+        if(number<1){
+            return result;
+        }else{
+            for(int i=1;i<number;i+=1){
+                if(number%i==0){
+                    sum=sum+i;
+                }
+            }
+            if(sum==number){
+                return true;
+            }
+        }
+        return result;
+    }
+}
